@@ -1,0 +1,16 @@
+USER-SUPPLIED VALUES: null
+falcon:
+  apd: false
+  aph: web-proxy.infra.dub.aws.renault.azn
+  app: 3128
+  cid: 3286B309F5A7463FA02881FABEBF3F48-24
+  message_log: false
+  tags: DFL,PRD
+node:
+  backend: bpf
+  daemonset:
+    tolerations:
+    - operator: Exists
+  image:
+    repository: 427496910378.dkr.ecr.eu-west-1.amazonaws.com/crowdstrike
+    tag: 7.05.0-16004-1.falcon-linux.x86_64.Release.EU-1
