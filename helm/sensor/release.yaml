@@ -1,0 +1,19 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: crowdstrike
+  namespace: crowdstrike
+falcon:
+  apd: false
+  cid: 3286B309F5A7463Flkdjlksdjsk
+  message_log: false
+  tags: PRD
+node:
+  backend: bpf
+  daemonset:
+    tolerations:
+    - operator: Exists
+  image:
+    repository: registry.crowdstrike.com/falcon-sensor/eu-1/release/falcon-sensor
+    tag: 7.05.0-16004-1.falcon-linux.x86_64.Release.EU-1
